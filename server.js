@@ -22,7 +22,7 @@ app.use('/breads', breadsController)
 
 // ERROR ROUTE
 app.get('*', (req, res) => {
-    res.send('404')
+    res.render('error404')
 })
 
 //LISTEN
