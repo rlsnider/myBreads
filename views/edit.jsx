@@ -2,13 +2,12 @@ const React = require('react');
 const Default = require('./layouts/Default')
 
 function Edit ({bread, index}) {
-    console.log(bread);
-    console.log(index);
-    console.log('I am alive')
+    console.log(bread, 'listed from views.edit.jsx');
+    console.log('hello from views.edit.jsx');
     return (
         <Default>
             <h2>Edit a bread</h2>
-            <form action={`/breads/${index}?_method=PUT`} method="POST">
+            <form action={`/breads/${bread.id}?_method=PUT`} method="POST">
                 <label htmlFor="name">Name</label>
                 <input 
                     type="text" 
